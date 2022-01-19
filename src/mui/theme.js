@@ -111,6 +111,7 @@ export default createTheme({
           position: "relative",
           zIndex: 10,
           color: theme.palette.primary.main,
+          boxShadow: "0px 4px 8px rgba(0,0,0,0.08)",
         }),
       },
     },

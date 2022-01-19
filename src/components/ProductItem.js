@@ -1,21 +1,16 @@
-import * as React from "react";
-import { styled } from "@mui/material/styles";
+import { useTheme } from "@emotion/react";
+import { Button, Grid, LinearProgress } from "@mui/material";
 import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
 import CardHeader from "@mui/material/CardHeader";
 import CardMedia from "@mui/material/CardMedia";
-import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
 import Collapse from "@mui/material/Collapse";
-import Avatar from "@mui/material/Avatar";
 import IconButton from "@mui/material/IconButton";
+import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
-import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { Box } from "@mui/system";
-import { useTheme } from "@emotion/react";
+import * as React from "react";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -68,22 +63,27 @@ export default function ProductItem() {
           <span>5.0</span>&nbsp;&nbsp;
           <span>(25k)</span>
         </Typography>
+        <Grid container columns={2} alignItems="center">
+          <Grid xs={1}>
+            <Typography
+              style={{
+                color: "#1AA3E9",
+                fontSize: 28,
+                fontWeight: 700,
+              }}
+            >
+              ₱ 1,500
+            </Typography>
+          </Grid>
+          <Grid xs={1}>
+            <Button variant="contained">Get Price</Button>
+          </Grid>
+        </Grid>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMoreIcon />
-        </ExpandMore>
+        <div style={{ width: "100%" }}>
+          <LinearProgress variant="determinate" value={80} />
+        </div>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>

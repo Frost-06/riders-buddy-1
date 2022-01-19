@@ -1,5 +1,7 @@
 import {
+  Box,
   Container,
+  Grid,
   InputAdornment,
   TextField,
   Typography,
@@ -9,6 +11,7 @@ import Banner from "../components/Banner";
 import CarouselContainer from "../components/Carousel/CarouselContainer";
 import Categories from "../components/Categories";
 import Header from "../components/Header";
+import ProductItem from "../components/ProductItem";
 
 function Dashboard(props) {
   return (
@@ -38,7 +41,44 @@ function Dashboard(props) {
           }}
           variant="outlined"
         />
+        <Typography variant="h2">Best Deals</Typography>
+        <Typography variant="body2" style={{ marginBottom: 49 }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Typography>
         <CarouselContainer />
+        <TextField
+          style={{ width: 560, marginBottom: 56 }}
+          className="searchbox noshadow"
+          placeholder="Search product, or services..."
+          InputProps={{
+            startAdornment: (
+              <InputAdornment position="start">
+                <img src="/img/search-icon.png" />
+              </InputAdornment>
+            ),
+          }}
+          variant="outlined"
+        />
+
+        <Typography variant="h2">What’s new?</Typography>
+        <Typography variant="body2" style={{ marginBottom: 49 }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Typography>
+        <CarouselContainer />
+
+        <Typography variant="h2">Bicycle Products and Services</Typography>
+        <Typography variant="body2" style={{ marginBottom: 49 }}>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </Typography>
+        <Box width="100%" spacing={2}>
+          <Grid container columns={4}>
+            {new Array(12).fill(0).map((a, i) => (
+              <Grid key={i} item xs={1}>
+                <ProductItem />
+              </Grid>
+            ))}
+          </Grid>
+        </Box>
       </Container>
     </div>
   );
