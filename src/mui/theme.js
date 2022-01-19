@@ -12,7 +12,7 @@ export default createTheme({
         ".banner": {
           background: "url(/img/banner-bg.png) no-repeat center",
           backgroundSize: "cover",
-          height: "calc( 100vh - 64px )",
+          height: "calc( 100vh - 138px )",
           display: "flex!important",
           alignItems: "center",
           maxWidth: "1600px!important",

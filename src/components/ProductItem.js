@@ -14,6 +14,8 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Box } from "@mui/system";
+import { useTheme } from "@emotion/react";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -28,6 +30,7 @@ const ExpandMore = styled((props) => {
 
 export default function ProductItem() {
   const [expanded, setExpanded] = React.useState(false);
+  const theme = useTheme();
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -37,29 +40,33 @@ export default function ProductItem() {
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            R
-          </Avatar>
+          <Box
+            bgcolor={theme.palette.primary.main}
+            color="#ffffff"
+            width={108}
+            style={{ padding: "5px 9px" }}
+          >
+            25% off
+          </Box>
         }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        action={<img src="/img/product-category-label-icon.png" />}
+        title=""
+        subheader=""
       />
       <CardMedia
         component="img"
         height="194"
-        image="/static/images/cards/paella.jpg"
+        image="/img/image.png"
         alt="Paella dish"
       />
       <CardContent>
+        <Typography variant="h2" style={{ fontSize: 20 }}>
+          Limit for two lines, name of the product or services here...
+        </Typography>
         <Typography variant="body2" color="text.secondary">
-          This impressive paella is a perfect party dish and a fun meal to cook
-          together with your guests. Add 1 cup of frozen peas along with the
-          mussels, if you like.
+          ⭐⭐⭐⭐⭐
+          <span>5.0</span>&nbsp;&nbsp;
+          <span>(25k)</span>
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
