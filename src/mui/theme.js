@@ -9,6 +9,9 @@ export default createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        "a:link": {
+          textDecoration: "none",
+        },
         ".banner": {
           background: "url(/img/banner-bg.png) no-repeat center",
           backgroundSize: "cover",
