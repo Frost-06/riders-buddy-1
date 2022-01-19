@@ -34,16 +34,16 @@ export default function ProductItem() {
 
   return (
     <Link to="/product">
-      <Card sx={{ maxWidth: 345 }}>
+      <Card sx={{ maxWidth: 356 }}>
         <CardHeader
           avatar={
             <Box
               bgcolor={theme.palette.primary.main}
               color="#ffffff"
-              width={108}
+              width={100}
               style={{ padding: "5px 9px" }}
             >
-              25% off
+            25% off
             </Box>
           }
           action={<img src="/img/product-category-label-icon.png" />}
@@ -57,12 +57,16 @@ export default function ProductItem() {
           alt="Paella dish"
         />
         <CardContent>
-          <Typography variant="h2" style={{ fontSize: 20 }}>
+          <Typography variant="h2" style={{ 
+            fontSize: 20,
+            padding: "0px 0px 8px 0px"      
+            }}>
             Limit for two lines, name of the product or services here...
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography variant="body2" color="text.secondary"
+          >
             ⭐⭐⭐⭐⭐
-            <span>5.0</span>&nbsp;&nbsp;
+            <span variant>5.0</span>&nbsp;&nbsp;
             <span>(25k)</span>
           </Typography>
           <Grid container columns={2} alignItems="center">
@@ -82,11 +86,11 @@ export default function ProductItem() {
             </Grid>
           </Grid>
         </CardContent>
-        <CardActions disableSpacing>
+        {/* <CardActions disableSpacing>
           <div style={{ width: "100%" }}>
             <LinearProgress variant="determinate" value={80} />
           </div>
-        </CardActions>
+        </CardActions> */}
         <Collapse in={expanded} timeout="auto" unmountOnExit>
           <CardContent>
             <Typography paragraph>Method:</Typography>

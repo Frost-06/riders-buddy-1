@@ -19,7 +19,7 @@ function Dashboard(props) {
       <Header />
       <Banner />
       <Container style={{ maxWidth: 1600 }}>
-        <div style={{ marginBottom: 56 }}>
+        <div style={{ marginBottom: 56, marginTop:56 }}>
           <Typography variant="h2">Explore by Category</Typography>
           <Typography variant="body2" style={{ marginBottom: 49 }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu
@@ -42,7 +42,7 @@ function Dashboard(props) {
           variant="outlined"
         />
         <Typography variant="h2">Best Deals</Typography>
-        <Typography variant="body2" style={{ marginBottom: 49 }}>
+        <Typography variant="body2" style={{ marginBottom: 56 }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Typography>
         <CarouselContainer />
@@ -61,17 +61,17 @@ function Dashboard(props) {
         />
 
         <Typography variant="h2">What’s new?</Typography>
-        <Typography variant="body2" style={{ marginBottom: 49 }}>
+        <Typography variant="body2" style={{ marginBottom: 56 }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Typography>
         <CarouselContainer />
 
         <Typography variant="h2">Bicycle Products and Services</Typography>
-        <Typography variant="body2" style={{ marginBottom: 49 }}>
+        <Typography variant="body2" style={{ marginBottom: 56 }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Typography>
         <Box width="100%" spacing={2}>
-          <Grid container columns={4}>
+          <Grid container columns={4} spacing={2}>
             {new Array(12).fill(0).map((a, i) => (
               <Grid key={i} item xs={1}>
                 <ProductItem />

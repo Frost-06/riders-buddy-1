@@ -16,14 +16,16 @@ function Banner(props) {
           <Typography
             variant="h1"
             style={{
+              padding: "0px 0px 8px 150px",
               fontWeight: 700,
               marginBottom: 24,
+              
             }}
           >
             Browse for nearby stores
           </Typography>
           <Grid>
-            <TextField
+            <TextField 
               className="searchbox"
               placeholder="Enter your delivery address..."
               InputProps={{
@@ -39,6 +41,8 @@ function Banner(props) {
                 ),
               }}
               variant="outlined"
+              style={{
+                padding: "0px 0px 0px 150px",}}
             />
             <Button variant="contained">Find Shops</Button>
           </Grid>

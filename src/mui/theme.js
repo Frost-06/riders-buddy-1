@@ -18,7 +18,7 @@ export default createTheme({
           height: "calc( 100vh - 138px )",
           display: "flex!important",
           alignItems: "center",
-          maxWidth: "1600px!important",
+          maxWidth: "1980px!important",
         },
         ".MuiMobileStepper-dots": {
           flex: "1 100%",

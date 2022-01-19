@@ -45,7 +45,7 @@ export default function Header() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <Container style={{ marginTop: 40 }}>
+      <Container style={{ marginTop: 40}}>
         <Typography variant="h1" style={{ fontSize: 28, marginBottom: 32 }}>
           Sign-in to enjoy exclusive deals and offers
         </Typography>
