@@ -2,6 +2,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import {
+  Container,
   Divider,
   List,
   ListItem,
@@ -69,7 +70,7 @@ export default function Header() {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <>
       <SwipeableDrawer
         anchor={"left"}
         open={state["left"]}
@@ -91,12 +92,14 @@ export default function Header() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Riders Buddy
+            <img src="/img/logo.png" width="249" height="40" />
           </Typography>
-          <Button color="inherit">Sign in</Button>
-          <Button color="inherit">Sign up</Button>
+          <Button variant="contained" style={{ marginRight: 24 }}>
+            Sign in
+          </Button>
+          <Button variant="outlined">Sign up</Button>
         </Toolbar>
       </AppBar>
-    </Box>
+    </>
   );
 }
