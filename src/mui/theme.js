@@ -20,7 +20,7 @@ export default createTheme({
         ".banner": {
           background: "url(/img/banner-bg.png) no-repeat center",
           backgroundSize: "cover",
-          height: "calc( 100vh - 133px )",
+          height: "calc( 100vh - 120px )",
           display: "flex!important",
           alignItems: "center",
           maxWidth: "1920px!important",
