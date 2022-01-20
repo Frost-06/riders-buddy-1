@@ -49,7 +49,7 @@ export default function Header() {
           Sign in
         </Button>
         <List>
-          {["Abous us", "Seller Center", "Help Center"].map((text, index) => (
+          {["About us", "Seller Center", "Help Center"].map((text, index) => (
             <ListItem button key={text}>
               <ListItemText primary={text} />
             </ListItem>
