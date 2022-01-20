@@ -45,6 +45,9 @@ function Service(props) {
               backgroundSize: "cover",
               backgroundPosition: "center",
               marginRight: "35px",
+              height: "50%",
+              borderRadius: "24px"
+              
             }}
           />
           <Grid item md={5} elevation={6}>
