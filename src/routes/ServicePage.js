@@ -11,6 +11,7 @@ import React from "react";
 import Header from "../components/Header";
 import CarouselContainer from "../components/Carousel/CarouselContainer";
 import ServiceDetails from "../components/Service/ServiceDetails";
+import Footer from "../components/Footer"
 
 function Service(props) {
 
@@ -47,7 +48,7 @@ function Service(props) {
               marginRight: "35px",
               height: "50%",
               borderRadius: "24px"
-              
+
             }}
           />
           <Grid item md={5} elevation={6}>
@@ -59,6 +60,8 @@ function Service(props) {
         </Typography>
         <CarouselContainer />
       </Container>
+
+      <Footer />
     </div>
   );
 }

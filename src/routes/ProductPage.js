@@ -19,6 +19,7 @@ import CarouselContainer from "../components/Carousel/CarouselContainer";
 import { useTheme } from "@emotion/react";
 import ProductDetails from "../components/Product/ProductDetails";
 import ChatContainer from "../components/Chat/ChatContainer";
+import Footer from "../components/Footer"
 
 
 function ProductPage(props) {
@@ -75,6 +76,7 @@ function ProductPage(props) {
         </Typography>
         <CarouselContainer />
       </Container>
+      <Footer />
     </div>
   );
 }
