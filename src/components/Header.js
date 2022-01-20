@@ -17,6 +17,7 @@ import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   const [state, setState] = React.useState({
@@ -49,7 +50,7 @@ export default function Header() {
         <Typography variant="h1" style={{ fontSize: 28, marginBottom: 32 }}>
           Sign-in to enjoy exclusive deals and offers
         </Typography>
-        <Button variant="contained">Sign in</Button>
+        <Button variant="contained" href="/sign-in">Sign in</Button>
         <List>
           {["Abous us", "Seller Center", "Help Center"].map((text, index) => (
             <ListItem button key={text}>
@@ -86,10 +87,10 @@ export default function Header() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <img src="/img/logo.png" width="249" height="40" />
           </Typography>
-          <Button variant="contained" style={{ marginRight: 24 }}>
+          <Button variant="contained" href="/sign-in" style={{ marginRight: 24 }}>
             Sign in
           </Button>
-          <Button variant="outlined">Sign up</Button>
+          <Button variant="outlined" href="/sign-up">Sign up</Button>
         </Toolbar>
       </AppBar>
     </>
