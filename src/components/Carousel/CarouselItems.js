@@ -5,11 +5,13 @@ import ProductItem from "../ProductItem";
 
 function CarouselItems(props) {
   return (
-    <Box width="100%" spacing={2}>
-      <Grid container columns={4}  spacing={2}>
-        {new Array(4).fill(0).map((a, i) => (
-          <Grid key={i} item xs={1}>
-            <ProductItem />
+    <Box width="100%" spacing={4} style={{ 
+      padding: "10px 0px 10px 1px"
+    }}>
+      <Grid container columns={4} spacing={2}>
+        {require("../../bestSeller.json").map((bestSeller, index) => (
+          <Grid key={index} item xs={1}>
+            <ProductItem {...bestSeller} />
           </Grid>
         ))}
       </Grid>

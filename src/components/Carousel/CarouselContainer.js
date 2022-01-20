@@ -12,7 +12,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 function CarouselContainer() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = 10;
+  const maxSteps = 4;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -34,7 +34,7 @@ function CarouselContainer() {
         onChangeIndex={handleStepChange}
         enableMouseEvents
       >
-        {new Array(10).fill(0).map((step, index) => (
+        {new Array(4).fill(0).map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? <CarouselItems /> : null}
           </div>
