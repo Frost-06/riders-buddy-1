@@ -46,11 +46,13 @@ export default function Header() {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <Container style={{ marginTop: 40}}>
+      <Container style={{ marginTop: 40 }}>
         <Typography variant="h1" style={{ fontSize: 28, marginBottom: 32 }}>
           Sign-in to enjoy exclusive deals and offers
         </Typography>
-        <Button variant="contained" href="/sign-in">Sign in</Button>
+        <Button variant="contained" href="/sign-in">
+          Sign in
+        </Button>
         <List>
           {["Abous us", "Seller Center", "Help Center"].map((text, index) => (
             <ListItem button key={text}>
@@ -87,10 +89,16 @@ export default function Header() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <img src="/img/logo.png" width="249" height="40" />
           </Typography>
-          <Button variant="contained" href="/sign-in" style={{ marginRight: 24 }}>
+          <Button
+            variant="contained"
+            href="/sign-in"
+            style={{ marginRight: 24 }}
+          >
             Sign in
           </Button>
-          <Button variant="outlined" href="/sign-up">Sign up</Button>
+          <Button variant="outlined" href="/sign-up">
+            Sign up
+          </Button>
         </Toolbar>
       </AppBar>
     </>
