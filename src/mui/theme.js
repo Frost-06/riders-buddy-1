@@ -1,4 +1,5 @@
 import { createTheme } from "@mui/material/styles";
+import { padding } from "@mui/system";
 
 export default createTheme({
   typography: {
@@ -21,11 +22,13 @@ export default createTheme({
         ".banner": {
           background: "url(/img/banner-bg.png) no-repeat center",
           backgroundSize: "cover",
-          height: "calc( 100vh - 138px )",
+          height: "calc( 100vh - 133px )",
           display: "flex!important",
           alignItems: "center",
-          maxWidth: "1980px!important",
+          maxWidth: "1920px!important",
         },
+
+
         ".MuiMobileStepper-dots": {
           flex: "1 100%",
           display: "flex",
@@ -72,8 +75,17 @@ export default createTheme({
         ".category-image": {
           position: "absolute",
           right: 0,
-          bottom: -2,
+          bottom: -1,
         },
+
+        ".priceRange": {
+          display: "inline-flex",
+          alignItems: "center",
+          backgroundColor: "#F7F7FC",
+          borderRadius: "25px",
+          padding: "8px 0px 8px 20px",
+          marginTop: "24px"
+        }
       },
     },
     MuiButtonBase: {
@@ -109,6 +121,11 @@ export default createTheme({
           color: "#14142B",
           fontWeight: "bold",
         },
+        h3 : {
+          fontSize:18,
+          color: "#14142B",
+          fontWeight: "600",
+        }
       },
     },
     MuiAppBar: {
@@ -117,10 +134,12 @@ export default createTheme({
           paddingBottom: 32,
           paddingTop: 32,
           backgroundColor: "#ffffff",
-          position: "relative",
-          zIndex: 10,
+          position: "sticky",
+          top: 0,
+          zIndex: 20,
           color: theme.palette.primary.main,
           boxShadow: "0px 4px 8px rgba(0,0,0,0.08)",
+          
         }),
       },
     },
