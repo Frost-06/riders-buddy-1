@@ -8,7 +8,10 @@ import {
   CardHeader,
   CssBaseline,
   Button,
-  Avatar
+  Avatar,
+  Link,
+  Breadcrumbs,
+
 } from "@mui/material";
 
 import React from "react";
@@ -22,14 +25,21 @@ function Product(props) {
   return (
     <div>
       <Header />
-      <Container style={{ maxWidth: 1600,}} className="productDesc">
+      <Container style={{ maxWidth: 1600, marginTop: "48px"}} className="productDesc">
+      <Breadcrumbs aria-label="breadcrumb" style={{marginBottom: "24px"}}>
+        <Link underline="hover" color="inherit" href="/" variant="h3" st>
+          Home
+        </Link>
+
+        <Typography color="text.primary">Product Page</Typography>
+      </Breadcrumbs>
         <Grid container component="main" sx={{ height: '100vh' }}>
         <CssBaseline />
         <Grid
           item
           xs={false}
           sm={4}
-          md={7}
+          md={6.7}
           sx={{
             backgroundImage: 'url(/img/image.png)',
             backgroundRepeat: 'no-repeat',
@@ -37,6 +47,7 @@ function Product(props) {
               t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
             backgroundSize: 'cover',
             backgroundPosition: 'center',
+            marginRight: "35px"
           }}
           
           
@@ -57,6 +68,7 @@ function Product(props) {
                 <span>500 sold</span>
             </Typography>
 
+            
                 <Grid className="priceRange" container columns={2}>
                   <Typography
                         style={{
@@ -85,6 +97,121 @@ function Product(props) {
                 />
                 
                 </Grid>
+
+                <Grid style={{width: "100%", display: "inline-flex", 
+                marginBottom: "32px",marginTop: "32px"}}>
+                  <Container>
+                    <Typography variant="label" style={{display: "inline-flex", gap: "48px"}}>
+                      Parts:
+                      <span style={{
+                        fontSize: "15px",
+                        color: "#14142B"
+                      }}>
+                      SAVA Deck 300
+                    </span>
+                    </Typography> 
+                  </Container>
+                  <Container>
+                    <Typography variant="label" style={{display: "inline-flex", gap: "48px"}}>
+                    Categories:
+                      <span style={{
+                        fontSize: "15px",
+                        color: "#1AA3E9"
+                      }}>
+                      Bicycle Categories
+                    </span>
+                    </Typography> 
+                  </Container>
+                </Grid>
+
+                <Grid style={{width: "100%", display: "inline-flex", marginBottom: "32px"}}>
+                  <Container>
+                    <Typography variant="label" style={{display: "inline-flex", gap: "56px"}}>
+                      SKU:
+                      <span style={{
+                        fontSize: "15px",
+                        color: "#14142B"
+                      }}>
+                      96635
+                    </span>
+                    </Typography> 
+                  </Container>
+                  <Container>
+                    <Typography variant="label" style={{display: "inline-flex", gap: "79px"}}>
+                    Weight:
+                      <span style={{
+                        fontSize: "15px",
+                        color: "#14142B"
+                      }}>
+                      4kg
+                    </span>
+                    </Typography> 
+                  </Container>
+                </Grid>
+
+                <Grid style={{width: "100%", display: "inline-flex", marginBottom: "32px"}}>
+                  <Container>
+                    <Typography variant="label" style={{display: "inline-flex", gap: "42px"}}>
+                      Stock:
+                      <span style={{
+                        fontSize: "15px",
+                        color: "#14142B"
+                      }}>
+                      SAVA
+                    </span>
+
+                    </Typography> 
+                  </Container>
+                  <Container>
+                    <Typography variant="label" style={{display: "inline-flex", gap: "90px"}}>
+                    Color:
+                      <span style={{
+                        fontSize: "15px",
+                        color: "#14142B"
+                      }}>
+                      Blue
+                    </span>
+                    </Typography> 
+                  </Container>
+                </Grid>
+
+                <Grid style={{width: "100%", display: "inline-flex"}}>
+                  <Container>
+                    <Typography variant="label" style={{display: "inline-flex", gap: "42px"}}>
+                      Stock:
+                      <span style={{
+                        fontSize: "15px",
+                        color: "#008A00"
+                      }}>
+                      In Stock
+                    </span>
+
+                    <span variat="label" style={{
+                        fontSize: "15px",
+                        
+                        marginLeft: "-35px"
+                      }}>
+                      (25)
+                    </span>
+                    </Typography> 
+                  </Container>
+                  <Container>
+                    <Typography variant="label" style={{display: "inline-flex", gap: "50px"}}>
+                    Dimensions:
+                      <span style={{
+                        fontSize: "15px",
+                        color: "#14142B"
+                      }}>
+                      10 × 20 × 30 cm
+                    </span>
+                    </Typography> 
+                  </Container>
+                </Grid>
+
+
+                
+                
+
                 <Button
                   type="submit"
                   fullWidth
@@ -101,25 +228,26 @@ function Product(props) {
                   flexWrap: "wrap",
                   gap: "22px"
                 }}>
-                  
+
                 <Avatar alt="Favourite" src="/img/Favorite.png" />
 
                 <Typography variant="h3" >Add to Favourites</Typography>
-                <img src={"/img/vertical-line.png"} alt="Logo" />
+                <img src={"/img/vertical-line.png"} alt="vertical" />
 
-                <Avatar alt="Share" src="/img/Share.png" />
+                <img src={"/img/Share.png"} alt="vertical" />
 
                 <Typography variant="h3" >Share</Typography>
-                <img src={"/img/vertical-line.png"} alt="Logo" />
+                <img src={"/img/vertical-line.png"} alt="vertical" />
 
-                <Avatar alt="Share" src="/img/Compare.png" />
-
+                <img src={"/img/Compare.png"} alt="vertical" />
                 <Typography variant="h3" >Compare</Typography>
                 </Grid>
                 
 
             </Grid>
           </Grid>
+          
+
         <Typography variant="h2" style={{ marginBottom: "32px"}}>Similar Product</Typography>
       <CarouselContainer/>
       </Container>

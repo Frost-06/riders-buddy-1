@@ -125,7 +125,12 @@ export default createTheme({
           fontSize:18,
           color: "#14142B",
           fontWeight: "600",
-        }
+        },
+        label : {
+          fontSize: 15,
+          color: "#6E7191",
+          fontWeight: "normal",
+        },
       },
     },
     MuiAppBar: {
