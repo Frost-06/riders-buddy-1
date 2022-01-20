@@ -99,15 +99,6 @@ function Copyright(props) {
                   fullWidth
                   variant="contained"
                   sx={{ mt: 3, mb: 2 }}
-                  style={{
-                    borderRadius: 40,
-                    color: "#ffffff",
-                    fontSize: 15,
-                    fontWeight: 500,
-                    textTransform: "none",
-                    padding: "20px 32px",
-                    backgroundColor: '#1AA3E9'
-                  }}
                 >
                   Sign In
                 </Button>
@@ -127,7 +118,11 @@ function Copyright(props) {
                     }}>  Don't have an account? </span>
                     <Link href="#" variant="body2" style={{
                     color: "#1AA3E9",
-                  }}>
+                  }}
+                  onClick={() => {
+                    this.nextPath('/sign-up')
+                  }}
+                  >
                       {"Sign up"}
                       
                     </Link>
