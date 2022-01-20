@@ -12,6 +12,7 @@ import CarouselContainer from "../components/Carousel/CarouselContainer";
 import Categories from "../components/Categories";
 import Header from "../components/Header";
 import ProductItem from "../components/ProductItem";
+import Footer from "../components/Footer";
 
 function Dashboard(props) {
   return (
@@ -72,14 +73,16 @@ function Dashboard(props) {
         </Typography>
         <Box width="100%" spacing={2}>
           <Grid container columns={4} spacing={2}>
-            {new Array(12).fill(0).map((a, i) => (
-              <Grid key={i} item xs={1}>
-                <ProductItem />
+            {require("../products.json").map((product, index) => (
+              <Grid key={index} item xs={1}>
+                <ProductItem {...product}/>
               </Grid>
             ))}
           </Grid>
         </Box>
       </Container>
+
+      <Footer />
     </div>
   );
 }

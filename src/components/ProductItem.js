@@ -24,7 +24,14 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function ProductItem() {
+export default function ProductItem({
+  name,
+  price,
+  salePrice,
+  image,
+  rating,
+  categoryLabelIcon = "/img/product-category-label-icon.png"
+}) {
   const [expanded, setExpanded] = React.useState(false);
   const theme = useTheme();
 
@@ -37,16 +44,18 @@ export default function ProductItem() {
       <Card sx={{ maxWidth: 356 }}>
         <CardHeader
           avatar={
-            <Box
-              bgcolor={theme.palette.primary.main}
-              color="#ffffff"
-              width={100}
-              style={{ padding: "5px 9px" }}
-            >
-              25% off
-            </Box>
+            salePrice && <Box
+            bgcolor={theme.palette.primary.main}
+            color="#ffffff"
+            width={100}
+            style={{ padding: "5px 9px" }}
+          >
+            {salePrice * 100}% off
+          </Box>
           }
-          action={<img src="/img/product-category-label-icon.png" />}
+          action={
+            categoryLabelIcon && <img src={categoryLabelIcon} />
+          }
           title=""
           subheader=""
         />
@@ -64,13 +73,18 @@ export default function ProductItem() {
               padding: "0px 0px 8px 0px",
             }}
           >
-            Limit for two lines, name of the product or services here...
+            {name}
           </Typography>
+          {rating && 
           <Typography variant="body2" color="text.secondary">
-            ⭐⭐⭐⭐⭐
-            <span variant>5.0</span>&nbsp;&nbsp;
-            <span>(25k)</span>
-          </Typography>
+          {new Array(rating.stars).fill(0).map((s,i)=>(
+            <React.Fragment key={i}>
+              ⭐
+            </React.Fragment>
+          ))}
+          &nbsp;&nbsp;
+          <span>({rating.count})</span>
+        </Typography>}
           <Grid container columns={2} alignItems="center">
             <Grid xs={1}>
               <Typography
@@ -80,7 +94,7 @@ export default function ProductItem() {
                   fontWeight: 700,
                 }}
               >
-                ₱ 1,500
+                ₱ {price}
               </Typography>
             </Grid>
             <Grid xs={1}>

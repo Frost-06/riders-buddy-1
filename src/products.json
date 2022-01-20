@@ -1,0 +1,11 @@
+[
+    {
+        "name": "Mountain Bike",
+        "price": 1500,
+        "salePrice": 0.25,
+        "rating": {
+            "stars": 4,
+            "count": "2.5k"
+        }
+    }
+]
