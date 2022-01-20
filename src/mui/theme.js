@@ -146,5 +146,18 @@ export default createTheme({
         }),
       },
     },
+    MuiLink: {
+      styleOverrides: {
+        root: ({ theme }) => ({
+          textDecoration: "none",
+          color: "#14142B",
+          "&:hover": {
+            cursor: "pointer",
+            color: "#1AA3E9",
+            textDecoration: "underline",
+          },
+        }),
+    }
+  }
   },
 });

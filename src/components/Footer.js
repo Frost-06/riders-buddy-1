@@ -106,7 +106,7 @@ function Footer(props) {
           }}
         >
           <img src={"/img/logo.png"} alt="logo" width="35%" />
-          <Typography variant="label" style={{ width: "80%" }}>
+          <Typography variant="label" style={{ width: "80%", lineHeight: "32px"}}>
             Riders Buddy is a cross-platform application that offers buying and
             selling of wide range of bicycle and motorcycle parts and
             accessories. The brand mission is to provide purchases to consumers
@@ -183,8 +183,25 @@ function Footer(props) {
           <Typography>
           (032) 541 9812
           </Typography>
+
+          <Box style={{display: "inline-flex", gap: "32px"}}>
+          <Link><img src={"/img/Facebook.png"} alt="fb" /></Link>
+          <Link><img src={"/img/Twitter.png"} alt="twitter" /></Link>
+          <Link><img src={"/img/Instagram.png"} alt="insta" /></Link>
+          </Box>
         </Box>
+
+        
       </Box>
+      <Box style={{borderTop: "1px solid #D9DBE9", display: "inline-flex", alignItems: "center", gap: "1090px", marginLeft: "120px", padding: "32px"}}>
+            <Typography style={{fontSize: "18px", fontWeight: "bold", color: "#1AA3E9"}}>
+            ©2022  Riders Buddy
+            </Typography>
+            <Box style={{display: "inline-flex", flexDirection: "row", gap: "32px"}}>
+            <Link>Terms and Conditions</Link>
+            <Link>Privacy Policy</Link>
+            </Box>
+        </Box>
     </div>
   );
 }
