@@ -1,12 +1,4 @@
-import {
-  Container,
-  Divider,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  SwipeableDrawer,
-} from "@mui/material";
+import { Container, Link } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -49,8 +41,8 @@ function Footer(props) {
           gap: "128px",
           marginLeft: "180px",
           marginTop: "36px",
+          marginBottom: "36px",
           height: "140px",
-          borderBottom: "1px solid #D9DBE9",
         }}
       >
         <Box>
@@ -94,7 +86,105 @@ function Footer(props) {
         </Box>
       </Box>
 
-      
+      <Box
+        style={{
+          display: "inline-flex",
+          gap: "50px",
+          height: "460px",
+          borderTop: "1px solid #D9DBE9",
+        }}
+      >
+        <Box
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            maxWidth: "50%",
+            marginRight: "-100px",
+            gap: "32px",
+            marginLeft: "170px",
+            marginTop: "48px",
+          }}
+        >
+          <img src={"/img/logo.png"} alt="logo" width="35%" />
+          <Typography variant="label" style={{ width: "80%" }}>
+            Riders Buddy is a cross-platform application that offers buying and
+            selling of wide range of bicycle and motorcycle parts and
+            accessories. The brand mission is to provide purchases to consumers
+            without the worries of unreliable products. The brand mainly act as
+            an open space to work with potential stores that sells bicycle and
+            motorcycle parts and accessories.
+          </Typography>
+        </Box>
+        <Box
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "56px",
+            marginTop: "48px",
+          }}
+        >
+          <Typography
+            style={{
+              fontSize: "20px",
+              fontWeight: "bold",
+              color: "#1AA3E9",
+            }}
+          >
+            LEARN MORE
+          </Typography>
+          <Link>About us</Link>
+          <Link>Seller Center</Link>
+          <Link>Help Center</Link>
+        </Box>
+
+        <Box
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "56px",
+            marginTop: "48px",
+          }}
+        >
+          <Typography
+            style={{
+              fontSize: "20px",
+              fontWeight: "bold",
+              color: "#1AA3E9",
+            }}
+          >
+            CATEGORIES
+          </Typography>
+          <Link>Bicycle</Link>
+          <Link>Motorcycle</Link>
+          <Link>Shops</Link>
+        </Box>
+
+        <Box
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "56px",
+            marginTop: "48px",
+          }}
+        >
+          <Typography
+            style={{
+              fontSize: "20px",
+              fontWeight: "bold",
+              color: "#1AA3E9",
+            }}
+          >
+            CONTACT
+          </Typography>
+          <Typography>
+          support-ridersbuddy@gmail.com
+          </Typography>
+
+          <Typography>
+          (032) 541 9812
+          </Typography>
+        </Box>
+      </Box>
     </div>
   );
 }
