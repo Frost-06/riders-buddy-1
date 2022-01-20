@@ -5,6 +5,7 @@ import {
   ListItem,
   ListItemText,
   SwipeableDrawer,
+  Link
 } from "@mui/material";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -82,7 +83,8 @@ export default function Header() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <img src="/img/logo.png" width="249" height="40" />
+            <Link href="/"><img src="/img/logo.png" width="249" height="40" /></Link>
+            
           </Typography>
           <Button
             variant="contained"
