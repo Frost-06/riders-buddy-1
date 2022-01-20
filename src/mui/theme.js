@@ -1,6 +1,11 @@
 import { createTheme } from "@mui/material/styles";
 
 export default createTheme({
+  typography: {
+    fontFamily:
+      'Poppins'
+  },
+
   palette: {
     primary: {
       main: "#1AA3E9",
@@ -9,6 +14,7 @@ export default createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
+        
         "a:link": {
           textDecoration: "none",
         },
