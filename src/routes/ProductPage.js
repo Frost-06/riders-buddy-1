@@ -20,8 +20,10 @@ import { useTheme } from "@emotion/react";
 import ProductDetails from "../components/Product/ProductDetails";
 import ChatContainer from "../components/Chat/ChatContainer";
 
+
 function ProductPage(props) {
   const theme = useTheme();
+
 
   return (
     <div>
@@ -57,6 +59,8 @@ function ProductPage(props) {
               backgroundSize: "cover",
               backgroundPosition: "center",
               marginRight: "35px",
+              height: "50%",
+              borderRadius: "24px"
             }}
           />
 

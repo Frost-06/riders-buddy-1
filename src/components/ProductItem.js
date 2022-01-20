@@ -12,6 +12,7 @@ import Typography from "@mui/material/Typography";
 import { Box } from "@mui/system";
 import * as React from "react";
 import { Link } from "react-router-dom";
+import ProductPage from "../routes/ProductPage";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -28,9 +29,14 @@ export default function ProductItem({
   name,
   price,
   salePrice,
+  endingPrice,
   image,
   rating,
-  categoryLabelIcon = "/img/product-category-label-icon.png"
+  productDescription,
+  serviceDescription,
+  categoryLabelIcon = "/img/product-category-label-icon.png",
+  categoryType,
+  categoryLabelIcon1,
 }) {
   const [expanded, setExpanded] = React.useState(false);
   const theme = useTheme();
@@ -39,32 +45,43 @@ export default function ProductItem({
     setExpanded(!expanded);
   };
 
+  // check if category type product or service
+  categoryType === "product"
+    ? (categoryLabelIcon1 = categoryLabelIcon)
+    : (categoryLabelIcon1 = "/img/product-category-label-icon-hide.png");
+
   return (
-    <Link to="/product">
+    <Link 
+    to={"/"+categoryType}
+    state={{
+      name: name,
+      price: price,
+      endingPrice: endingPrice,
+      salePrice: salePrice,
+      rating: rating,
+      productDescription: productDescription,
+      serviceDescription: serviceDescription
+    }}
+    >
       <Card sx={{ maxWidth: 356 }}>
         <CardHeader
           avatar={
-            salePrice && <Box
-            bgcolor={theme.palette.primary.main}
-            color="#ffffff"
-            width={100}
-            style={{ padding: "5px 9px" }}
-          >
-            {salePrice * 100}% off
-          </Box>
+            salePrice && (
+              <Box
+                bgcolor={theme.palette.primary.main}
+                color="#ffffff"
+                width={100}
+                style={{ padding: "5px 9px" }}
+              >
+                {salePrice * 100}% off
+              </Box>
+            )
           }
-          action={
-            categoryLabelIcon && <img src={categoryLabelIcon} />
-          }
+          action={categoryLabelIcon1 && <img src={categoryLabelIcon1} />}
           title=""
           subheader=""
         />
-        <CardMedia
-          component="img"
-          height="194"
-          image="/img/image.png"
-          alt="Paella dish"
-        />
+        <CardMedia component="img" height="194" image="/img/image.png" alt="" />
         <CardContent>
           <Typography
             variant="h2"
@@ -73,20 +90,22 @@ export default function ProductItem({
               padding: "0px 0px 8px 0px",
             }}
           >
-            {name}
+            {name && name.slice(0, 40) + "..."}
           </Typography>
-          {rating && 
-          <Typography variant="body2" color="text.secondary">
-          {new Array(rating.stars).fill(0).map((s,i)=>(
-            <React.Fragment key={i}>
-              ⭐
-            </React.Fragment>
-          ))}
-          &nbsp;&nbsp;
-          <span>({rating.count})</span>
-        </Typography>}
-          <Grid container columns={2} alignItems="center">
+          {rating && (
+            <Typography variant="body2" color="text.secondary">
+              {new Array(rating.stars).fill(0).map((s, i) => (
+                <React.Fragment key={i}>⭐</React.Fragment>
+              ))}
+              &nbsp;&nbsp;
+              <span>({rating.count})</span>
+            </Typography>
+          )}
+          <Grid container columns={2} alignItems="center" style={{marginTop: '20px'}}>
             <Grid xs={1}>
+              <span variant="label">
+                Starting at
+              </span>
               <Typography
                 style={{
                   color: "#1AA3E9",

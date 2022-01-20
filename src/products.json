@@ -1,11 +1,48 @@
 [
     {
-        "name": "Mountain Bike",
+        "name": "KMC Chain Road Bike/Mountain Bike 9/10/11 Speed Magic Button 116L/118L Compatible for SHIMANO 9/10/11",
         "price": 1500,
+        "endingPrice": 2500,
         "salePrice": 0.25,
         "rating": {
             "stars": 4,
             "count": "2.5k"
-        }
+        },
+        "productDescription": {
+            "soldItems": "500",
+            "parts": "SAVA Deck 300",
+            "categories": "Bicycle Products",
+            "SKU": "96635",
+            "weight": "4kg",
+            "brand": "SAVA",
+            "color": "Blue",
+            "stockStatus": "In Stock",
+            "numberOfStocks": "25",
+            "Dimensions": "10 x 20 x15"
+        },
+        "categoryType": "product"     
+    },
+    {
+        "name": "Assemble & tune new boxed bike or new-to-you pre-owned bike",
+        "price": 500,
+        "endingPrice": 2500,
+        "salePrice": 0.10,
+        "rating": {
+            "stars": 5,
+            "count": "1.5k"
+        },
+
+        "serviceDescription": {
+            "soldItems": "100",
+            "status": "Available",
+            "categories": "Bicycle Services",
+            "serviceType": "Tire Installation",
+            "availability": "Mon - Fri",
+            "laborType": "per service",
+            "time": "08:00 A.M. - 05:00 P.M."
+        },
+        "categoryType": "service"     
     }
+
+
 ]

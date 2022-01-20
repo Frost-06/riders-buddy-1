@@ -10,10 +10,17 @@ import {
   
   import React from "react";
   import { useTheme } from "@emotion/react";
+  import { useLocation } from "react-router-dom";
   
   function ServiceDetails(props) {
     const theme = useTheme();
-  
+    const loc = useLocation();
+    const { name } = loc.state;
+    const { rating } = loc.state;
+    const { serviceDescription } = loc.state;
+    const { price } = loc.state;
+    const { endingPrice } = loc.state;
+    const { salePrice } = loc.state;
     return (
       <div>
         <Typography
@@ -23,9 +30,7 @@ import {
                 padding: "0px 0px 8px 0px",
               }}
             >
-              Full name for the product or service of the shop goes here. Lorem
-              ipsum dolor sit amet, consectetur elit.Mauris rutrum massa ante,
-              vel cursus ante sodales eu
+              {name}
             </Typography>
 
             <Typography
@@ -33,10 +38,17 @@ import {
               color="text.secondary"
               className="productRatingReview"
             >
-              ⭐⭐⭐⭐⭐ &nbsp;&nbsp;
-              <span variant>5.0 | </span>&nbsp;&nbsp;
-              <span>1k review | </span> &nbsp;&nbsp;
-              <span>500 sold</span>
+              {rating && (
+          <Typography variant="body2" color="text.secondary">
+            {new Array(rating.stars).fill(0).map((s, i) => (
+              <React.Fragment key={i}>⭐</React.Fragment>
+            ))}
+            &nbsp;&nbsp;
+            <span variant> | </span>&nbsp;&nbsp;
+            <span>{rating.count} review | </span> &nbsp;&nbsp;
+            <span>{serviceDescription.soldItems} sold</span>
+          </Typography>
+        )}
             </Typography>
 
             <Grid className="priceRange" container columns={2}>
@@ -47,7 +59,7 @@ import {
                   fontWeight: 700,
                 }}
               >
-                ₱ 1,500 -₱ 3,500
+                ₱ {price} - ₱ {endingPrice}
               </Typography>
 
               <CardHeader
@@ -59,7 +71,7 @@ import {
                     width={100}
                     style={{ padding: "5px 9px" }}
                   >
-                    25% off
+                    {salePrice * 100}% off
                   </Box>
                 }
                 title=""
@@ -87,7 +99,7 @@ import {
                       color: "#008A00",
                     }}
                   >
-                    Available
+                    {serviceDescription.status}
                   </span>
                 </Typography>
               </Container>
@@ -105,7 +117,7 @@ import {
                       marginLeft: "-6px",
                     }}
                   >
-                    Bicycle Service
+                    {serviceDescription.categories}
                   </span>
                 </Typography>
               </Container>
@@ -131,7 +143,7 @@ import {
                       marginLeft: "-28px",
                     }}
                   >
-                    Tire Installation
+                    {serviceDescription.serviceType}
                   </span>
                 </Typography>
               </Container>
@@ -148,7 +160,7 @@ import {
                       marginLeft: "-36px",
                     }}
                   >
-                    Mon - Fri
+                    {serviceDescription.availability}
                   </span>
                 </Typography>
               </Container>
@@ -173,7 +185,7 @@ import {
                       color: "#14142B",
                     }}
                   >
-                    per service
+                    {serviceDescription.laborType}
                   </span>
                 </Typography>
               </Container>
@@ -189,7 +201,7 @@ import {
                       color: "#14142B",
                     }}
                   >
-                    08:00 A.M. - 05:00 P.M.
+                   {serviceDescription.time}
                   </span>
                 </Typography>
               </Container>
