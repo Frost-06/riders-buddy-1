@@ -144,7 +144,6 @@ export default createTheme({
           zIndex: 20,
           color: theme.palette.primary.main,
           boxShadow: "0px 4px 8px rgba(0,0,0,0.08)",
-          
         }),
       },
     },
