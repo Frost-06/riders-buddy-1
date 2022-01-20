@@ -1,23 +1,10 @@
-import {
-  Box,
-  Button,
-  Container,
-  List,
-  ListItem,
-  ListItemText,
-  SwipeableDrawer,
-  Typography,
-} from "@mui/material";
+import { Box, SwipeableDrawer } from "@mui/material";
 import React, { useEffect } from "react";
+import useChat from "../../hooks/useChat";
 import Chat from "../Chat/Chat";
 
 function ChatContainer(props) {
-  const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,
-  });
+  const { chatDrawer, setChatDrawer } = useChat();
 
   const toggleDrawer = (anchor, open) => (event) => {
     if (
@@ -28,7 +15,7 @@ function ChatContainer(props) {
       return;
     }
 
-    setState({ ...state, [anchor]: open });
+    setChatDrawer({ ...chatDrawer, [anchor]: open });
   };
 
   const list = (anchor) => (
@@ -41,13 +28,11 @@ function ChatContainer(props) {
       <Chat />
     </Box>
   );
-  useEffect(() => {
-    setState({ ...state, right: true });
-  }, []);
+
   return (
     <SwipeableDrawer
       anchor={"right"}
-      open={state["right"]}
+      open={chatDrawer["right"]}
       onClose={toggleDrawer("right", false)}
       onOpen={toggleDrawer("right", true)}
     >

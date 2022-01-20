@@ -10,9 +10,12 @@ import {
 
 import React from "react";
 import { useTheme } from "@emotion/react";
+import useChat from "../../hooks/useChat";
+import ChatContainer from "../Chat/ChatContainer";
 
 function ProductPage(props) {
   const theme = useTheme();
+  const { chatDrawer, setChatDrawer } = useChat();
 
   return (
     <div>
@@ -237,7 +240,15 @@ function ProductPage(props) {
         </Container>
       </Grid>
 
-      <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
+      <Button
+        onClick={() => {
+          setChatDrawer({ ...chatDrawer, right: true });
+        }}
+        type="submit"
+        fullWidth
+        variant="contained"
+        sx={{ mt: 3, mb: 2 }}
+      >
         Get Price
       </Button>
       <Grid

@@ -9,9 +9,17 @@ import { useState } from "react";
 
 function App() {
   const [chatData, setChat] = useState();
+  const [chatDrawer, setChatDrawer] = useState({
+    top: false,
+    left: false,
+    bottom: false,
+    right: false,
+  });
 
   return (
-    <ChatContext.Provider value={{ chatData, setChat }}>
+    <ChatContext.Provider
+      value={{ chatData, setChat, chatDrawer, setChatDrawer }}
+    >
       <Routes>
         <Route path="/product" element={<ProductPage />} />
         <Route path="/sign-in" element={<SignIn />} />

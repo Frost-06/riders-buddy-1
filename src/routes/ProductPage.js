@@ -18,12 +18,14 @@ import Header from "../components/Header";
 import CarouselContainer from "../components/Carousel/CarouselContainer";
 import { useTheme } from "@emotion/react";
 import ProductDetails from "../components/Product/ProductDetails";
+import ChatContainer from "../components/Chat/ChatContainer";
 
 function ProductPage(props) {
   const theme = useTheme();
 
   return (
     <div>
+      <ChatContainer />
       <Header />
       <Container
         style={{ maxWidth: 1600, marginTop: "48px" }}
