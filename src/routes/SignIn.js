@@ -116,12 +116,9 @@ function Copyright(props) {
                     fontSize: '14px',
                     fontWeight: '500'
                     }}>  Don't have an account? </span>
-                    <Link href="#" variant="body2" style={{
+                    <Link href="/sign-up" variant="body2" style={{
                     color: "#1AA3E9",
-                  }}
-                  onClick={() => {
-                    this.nextPath('/sign-up')
-                  }}
+                  }}  
                   >
                       {"Sign up"}
                       
