@@ -43,7 +43,7 @@ export default function ProductItem() {
               width={100}
               style={{ padding: "5px 9px" }}
             >
-            25% off
+              25% off
             </Box>
           }
           action={<img src="/img/product-category-label-icon.png" />}
@@ -57,14 +57,16 @@ export default function ProductItem() {
           alt="Paella dish"
         />
         <CardContent>
-          <Typography variant="h2" style={{ 
-            fontSize: 20,
-            padding: "0px 0px 8px 0px"      
-            }}>
+          <Typography
+            variant="h2"
+            style={{
+              fontSize: 20,
+              padding: "0px 0px 8px 0px",
+            }}
+          >
             Limit for two lines, name of the product or services here...
           </Typography>
-          <Typography variant="body2" color="text.secondary"
-          >
+          <Typography variant="body2" color="text.secondary">
             ⭐⭐⭐⭐⭐
             <span variant>5.0</span>&nbsp;&nbsp;
             <span>(25k)</span>
