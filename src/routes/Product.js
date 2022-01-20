@@ -18,7 +18,6 @@ function Product(props) {
       <Container style={{ maxWidth: 1600 }}>
       <CarouselContainer/>
       </Container>
-      
     </div>
     
     
