@@ -3,8 +3,7 @@ import { padding } from "@mui/system";
 
 export default createTheme({
   typography: {
-    fontFamily:
-      'Poppins'
+    fontFamily: "Poppins",
   },
 
   palette: {
@@ -15,7 +14,6 @@ export default createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
-        
         "a:link": {
           textDecoration: "none",
         },
@@ -27,7 +25,6 @@ export default createTheme({
           alignItems: "center",
           maxWidth: "1920px!important",
         },
-
 
         ".MuiMobileStepper-dots": {
           flex: "1 100%",
@@ -84,8 +81,8 @@ export default createTheme({
           backgroundColor: "#F7F7FC",
           borderRadius: "25px",
           padding: "8px 0px 8px 20px",
-          marginTop: "24px"
-        }
+          marginTop: "24px",
+        },
       },
     },
     MuiButtonBase: {
@@ -121,12 +118,12 @@ export default createTheme({
           color: "#14142B",
           fontWeight: "bold",
         },
-        h3 : {
-          fontSize:18,
+        h3: {
+          fontSize: 18,
           color: "#14142B",
           fontWeight: "600",
         },
-        label : {
+        label: {
           fontSize: 15,
           color: "#6E7191",
           fontWeight: "normal",
@@ -137,6 +134,7 @@ export default createTheme({
       styleOverrides: {
         root: ({ theme }) => ({
           paddingBottom: 32,
+          height: 120,
           paddingTop: 32,
           backgroundColor: "#ffffff",
           position: "sticky",

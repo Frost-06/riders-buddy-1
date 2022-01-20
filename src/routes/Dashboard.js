@@ -10,17 +10,19 @@ import React from "react";
 import Banner from "../components/Banner";
 import CarouselContainer from "../components/Carousel/CarouselContainer";
 import Categories from "../components/Categories";
+import ChatContainer from "../components/Chat/ChatContainer";
+import Footer from "../components/Footer";
 import Header from "../components/Header";
 import ProductItem from "../components/ProductItem";
-import Footer from "../components/Footer";
 
 function Dashboard(props) {
   return (
     <div>
+      <ChatContainer />
       <Header />
       <Banner />
       <Container style={{ maxWidth: 1600 }}>
-        <div style={{ marginBottom: 56, marginTop:56 }}>
+        <div style={{ marginBottom: 56, marginTop: 56 }}>
           <Typography variant="h2">Explore by Category</Typography>
           <Typography variant="body2" style={{ marginBottom: 49 }}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu
@@ -75,7 +77,7 @@ function Dashboard(props) {
           <Grid container columns={4} spacing={2}>
             {require("../products.json").map((product, index) => (
               <Grid key={index} item xs={1}>
-                <ProductItem {...product}/>
+                <ProductItem {...product} />
               </Grid>
             ))}
           </Grid>

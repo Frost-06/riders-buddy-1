@@ -1,12 +1,8 @@
-import MailIcon from "@mui/icons-material/Mail";
 import MenuIcon from "@mui/icons-material/Menu";
-import InboxIcon from "@mui/icons-material/MoveToInbox";
 import {
   Container,
-  Divider,
   List,
   ListItem,
-  ListItemIcon,
   ListItemText,
   SwipeableDrawer,
 } from "@mui/material";
@@ -17,7 +13,6 @@ import IconButton from "@mui/material/IconButton";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
-import { Link } from "react-router-dom";
 
 export default function Header() {
   const [state, setState] = React.useState({
