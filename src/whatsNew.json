@@ -1,41 +1,18 @@
 [
     {
-        "name": "KMC Chain Road Bike/Mountain Bike 9/10/11 Speed Magic Button 116L/118L Compatible for SHIMANO 9/10/11",
-        "price": 1500,
-        "endingPrice": 2500,
-        "salePrice": "0.25",
-        "rating": {
-            "stars": 4,
-            "count": "2.5k"
-        },
-        "productDescription": {
-            "soldItems": "500",
-            "parts": "Bike Chain",
-            "categories": "Bicycle Products",
-            "SKU": "96635",
-            "weight": "4kg",
-            "brand": "KMC",
-            "color": "Silver",
-            "stockStatus": "In Stock",
-            "numberOfStocks": "25",
-            "Dimensions": "10 x 20 x15"
-        },
-        "categoryType": "product"
-    },
-    {
-        "name": "Assemble & tune new boxed bike or new-to-you pre-owned bike",
-        "price": 500,
-        "endingPrice": 2500,
+        "name": "Motorcycle Change oil",
+        "price": 300,
+        "endingPrice": 500,
         "salePrice": 0.10,
         "rating": {
             "stars": 5,
-            "count": "1.5k"
+            "count": "3.2k"
         },
         "serviceDescription": {
-            "soldItems": "100",
+            "soldItems": "--",
             "status": "Available",
-            "categories": "Bicycle Services",
-            "serviceType": "Tire Installation",
+            "categories": "Motorcycle Services",
+            "serviceType": "Motorcycle new oil application",
             "availability": "Mon - Fri",
             "laborType": "per service",
             "time": "08:00 A.M. - 05:00 P.M."
@@ -43,7 +20,30 @@
         "categoryType": "service"
     },
     {
-        "name": "Shimano Tourney 6/7/8 speed Rear Derailleur RD-TZ500 Bicycle Mountain Bike Part roller Groupset",
+        "name": "C2 Motorcycle Alloy Holder",
+        "price": 199,
+        "endingPrice": 299,
+        "salePrice": "",
+        "rating": {
+            "stars": 4,
+            "count": "6.1k"
+        },
+        "productDescription": {
+            "soldItems": "58",
+            "parts": "MOTORCYCLE Mobile Cellphone Holder",
+            "categories": "Motorcycle Products",
+            "SKU": "96648",
+            "weight": "20g",
+            "brand": "Universal",
+            "color": "Black",
+            "stockStatus": "In Stock",
+            "numberOfStocks": "100",
+            "Dimensions": "5 x 5"
+        },
+        "categoryType": "product"
+    },
+    {
+        "name": "Shimano Tourney speed Rear",
         "price": 400,
         "endingPrice": 500,
         "salePrice": "0.30",
@@ -66,25 +66,25 @@
         "categoryType": "product"
     },
     {
-        "name": "SNAIL 96BCD 32-38T MTB Bike Bicycle Chainring Chain Wheel Circular Disc Single speed positive and negative plate Bike Parts",
-        "price": 500,
+        "name": "220CM*3.5CM XRM/WAVE125",
+        "price": 400,
         "endingPrice": 600,
-        "salePrice": "0.50",
+        "salePrice": "",
         "rating": {
             "stars": 4,
-            "count": "1.7k"
+            "count": "142"
         },
         "productDescription": {
-            "soldItems": "98",
-            "parts": "Chain Wheel Circular Disc",
-            "categories": "Bicycle Products",
-            "SKU": "96637",
-            "weight": "52g",
-            "brand": "Snail",
-            "color": "Black",
+            "soldItems": "1.3k",
+            "parts": "Disc Plate",
+            "categories": "Motorcycle Products",
+            "SKU": "96646",
+            "weight": "---",
+            "brand": "Brandnew Tmx155",
+            "color": "BLACK.SILVER.GOLD",
             "stockStatus": "In Stock",
-            "numberOfStocks": "26",
-            "Dimensions": "10 x 15 x 12"
+            "numberOfStocks": "90",
+            "Dimensions": "220CM x 3.5CM"
         },
         "categoryType": "product"
     }

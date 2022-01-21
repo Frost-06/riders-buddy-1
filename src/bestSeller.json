@@ -43,25 +43,25 @@
         "categoryType": "service"
     },
     {
-        "name": "Shimano Tourney 6/7/8 speed Rear Derailleur RD-TZ500 Bicycle Mountain Bike Part roller Groupset",
-        "price": 400,
-        "endingPrice": 500,
-        "salePrice": "0.30",
+        "name": "LJ Motorcycle absorber front shock xrm 110/125(telescopic assy)",
+        "price": 799,
+        "endingPrice": 999,
+        "salePrice": "0.05",
         "rating": {
             "stars": 4,
-            "count": "1.3k"
+            "count": "1.8k"
         },
         "productDescription": {
-            "soldItems": "107",
-            "parts": "Rear Shifter",
-            "categories": "Bicycle Products",
-            "SKU": "96636",
-            "weight": "270g",
-            "brand": "Shimano",
-            "color": "Black",
+            "soldItems": "58",
+            "parts": "MOTORCYCLE front shock",
+            "categories": "Motorcycle Products",
+            "SKU": "96649",
+            "weight": "---",
+            "brand": "XRM Stock",
+            "color": "Gray",
             "stockStatus": "In Stock",
-            "numberOfStocks": "3",
-            "Dimensions": "14 x 12 x 55"
+            "numberOfStocks": "10",
+            "Dimensions": "3 x 4 x 2"
         },
         "categoryType": "product"
     },
