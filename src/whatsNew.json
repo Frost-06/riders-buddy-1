@@ -1,7 +1,8 @@
 [
 
     {
-        "name": "Assemble & tune new boxed bike or new-to-you pre-owned bike",
+        "itemStatus": "new",
+        "name": " 1 Assemble & tune new boxed bike or new-to-you pre-owned bike",
         "price": 500,
         "endingPrice": 2500,
         "salePrice": 0.10,
@@ -22,7 +23,8 @@
         "categoryType": "service"     
     },
     {
-        "name": "KMC Chain Road Bike/Mountain Bike 9/10/11 Speed Magic Button 116L/118L Compatible for SHIMANO 9/10/11",
+        "itemStatus": "new",
+        "name": " 1 KMC Chain Road Bike/Mountain Bike 9/10/11 Speed Magic Button 116L/118L Compatible for SHIMANO 9/10/11",
         "price": 1500,
         "endingPrice": 2500,
         "salePrice": 0.25,

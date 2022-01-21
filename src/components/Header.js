@@ -5,8 +5,11 @@ import {
   ListItem,
   ListItemText,
   SwipeableDrawer,
-  Link
+  Link,
+  Divider,
 } from "@mui/material";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -16,6 +19,7 @@ import Typography from "@mui/material/Typography";
 import * as React from "react";
 
 export default function Header() {
+  const loginID = 1;
   const [state, setState] = React.useState({
     top: false,
     left: false,
@@ -49,6 +53,67 @@ export default function Header() {
         <Button variant="contained" href="/sign-in">
           Sign in
         </Button>
+        <Box>
+          {/* Navigation */}
+
+          
+          <nav>
+            <List>
+              <ListItem disablePadding>
+                <ListItemButton
+                  style={{ marginBottom: "24px", padding: "22px" }}
+                >
+                  <ListItemIcon>
+                    <img src={"/img/my-order.png"} alt="prof" />
+                  </ListItemIcon>
+                  <Typography style={{ fontWeight: "bold" }}>
+                    My Orders
+                  </Typography>
+                </ListItemButton>
+              </ListItem>
+
+              <ListItem disablePadding>
+                <ListItemButton
+                  style={{ marginBottom: "24px", padding: "22px" }}
+                >
+                  <ListItemIcon>
+                    <img src={"/img/my-favourites.png"} alt="prof" />
+                  </ListItemIcon>
+                  <Typography style={{ fontWeight: "bold" }}>
+                    My Favourites
+                  </Typography>
+                </ListItemButton>
+              </ListItem>
+
+              <ListItem disablePadding>
+                <ListItemButton
+                  style={{ marginBottom: "24px", padding: "22px" }}
+                >
+                  <ListItemIcon>
+                    <img src={"/img/vouchers.png"} alt="prof" />
+                  </ListItemIcon>
+                  <Typography style={{ fontWeight: "bold" }}>
+                    Vouchers
+                  </Typography>
+                </ListItemButton>
+              </ListItem>
+
+              <ListItem disablePadding>
+                <ListItemButton
+                  style={{ marginBottom: "24px", padding: "22px" }}
+                >
+                  <ListItemIcon>
+                    <img src={"/img/log-out.png"} alt="prof" />
+                  </ListItemIcon>
+                  <Typography style={{ fontWeight: "bold" }}>
+                    Log-out
+                  </Typography>
+                </ListItemButton>
+              </ListItem>
+            </List>
+          </nav>
+          <Divider />
+        </Box>
         <List>
           {["About us", "Seller Center", "Help Center"].map((text, index) => (
             <ListItem button key={text}>
@@ -83,8 +148,9 @@ export default function Header() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            <Link href="/"><img src="/img/logo.png" width="249" height="40" /></Link>
-            
+            <Link href="/">
+              <img src="/img/logo.png" width="249" height="40" />
+            </Link>
           </Typography>
           <Button
             variant="contained"

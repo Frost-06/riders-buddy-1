@@ -1,5 +1,4 @@
 import { createTheme } from "@mui/material/styles";
-import { padding } from "@mui/system";
 
 export default createTheme({
   typography: {
@@ -19,6 +18,22 @@ export default createTheme({
         },
         ".banner": {
           background: "url(/img/banner-bg.png) no-repeat center",
+          backgroundSize: "cover",
+          height: "calc( 100vh - 120px )",
+          display: "flex!important",
+          alignItems: "center",
+          maxWidth: "1920px!important",
+        },
+        ".banner-2": {
+          background: "url(/img/banner-bg-2.png) no-repeat center",
+          backgroundSize: "cover",
+          height: "calc( 100vh - 120px )",
+          display: "flex!important",
+          alignItems: "center",
+          maxWidth: "1920px!important",
+        },
+        ".banner-3": {
+          background: "url(/img/banner-bg-3.png) no-repeat center",
           backgroundSize: "cover",
           height: "calc( 100vh - 120px )",
           display: "flex!important",

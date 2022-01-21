@@ -9,6 +9,7 @@ import {
 import React from "react";
 import Banner from "../components/Banner";
 import CarouselContainer from "../components/Carousel/CarouselContainer";
+import SecondCarouselContainer from "../components/Carousel/SecondCarouselContainer";
 import Categories from "../components/Categories";
 import ChatContainer from "../components/Chat/ChatContainer";
 import Footer from "../components/Footer";
@@ -67,7 +68,7 @@ function Dashboard(props) {
         <Typography variant="body2" style={{ marginBottom: 56 }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </Typography>
-        <CarouselContainer />
+        <SecondCarouselContainer />
 
         <Typography variant="h2">Bicycle Products and Services</Typography>
         <Typography variant="body2" style={{ marginBottom: 56 }}>
