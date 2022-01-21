@@ -2,6 +2,7 @@
     {
         "name": "KMC Chain Road Bike/Mountain Bike 9/10/11 Speed Magic Button 116L/118L Compatible for SHIMANO 9/10/11",
         "price": 1500,
+        "image" : "/img/item-img/1.png",
         "endingPrice": 2500,
         "salePrice": "0.25",
         "rating": {
@@ -25,6 +26,7 @@
     {
         "name": "Assemble & tune new boxed bike or new-to-you pre-owned bike",
         "price": 500,
+        "image" : "/img/item-img/2.jpg",
         "endingPrice": 2500,
         "salePrice": 0.10,
         "rating": {
@@ -45,6 +47,7 @@
     {
         "name": "LJ Motorcycle absorber front shock xrm 110/125(telescopic assy)",
         "price": 799,
+        "image" : "/img/item-img/16.png",
         "endingPrice": 999,
         "salePrice": "0.05",
         "rating": {
@@ -68,6 +71,7 @@
     {
         "name": "SNAIL 96BCD 32-38T MTB Bike Bicycle Chainring Chain Wheel Circular Disc Single speed positive and negative plate Bike Parts",
         "price": 500,
+        "image" : "/img/item-img/4.png",
         "endingPrice": 600,
         "salePrice": "0.50",
         "rating": {

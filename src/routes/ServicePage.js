@@ -14,8 +14,13 @@ import CarouselContainer from "../components/Carousel/CarouselContainer";
 import ServiceDetails from "../components/Service/ServiceDetails";
 import Footer from "../components/Footer"
 import ServiceTabPage from "../components/Service/serviceTabPage"
+import { useLocation } from "react-router-dom";
 
 function Service(props) {
+
+  const loc = useLocation();
+
+  const { image } = loc.state;
 
   return (
     <div>
@@ -33,13 +38,13 @@ function Service(props) {
         </Breadcrumbs>
         <Grid container component="main" sx={{ height: "140vh", marginBottom: "56px" }}>
           <CssBaseline />
-          <Grid
-            item
+          <Grid item
             xs={false}
             sm={4}
             md={6.7}
             sx={{
-              backgroundImage: "url(/img/image.png)",
+              backgroundImage: "url("+{image}+")",
+              height: "600px",
               backgroundRepeat: "no-repeat",
               backgroundColor: (t) =>
                 t.palette.mode === "light"
@@ -48,11 +53,12 @@ function Service(props) {
               backgroundSize: "cover",
               backgroundPosition: "center",
               marginRight: "35px",
-              height: "50%",
-              borderRadius: "24px"
-
-            }}
-          />
+              borderRadius: "24px",
+            }}>
+              <Container style={{display:"block", width: "79%", objecFit: "contain"}}>
+                <img src={image} style={{width: "109%"}}/>
+              </Container>
+            </Grid>
           <Grid item md={5} elevation={6}>
             <ServiceDetails />
           </Grid>

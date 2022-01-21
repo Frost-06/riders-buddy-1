@@ -22,11 +22,16 @@ import ProductDetails from "../components/Product/ProductDetails";
 import ChatContainer from "../components/Chat/ChatContainer";
 import Footer from "../components/Footer"
 import TabPage from "../components/Product/TabPage"
+import { useLocation } from "react-router-dom";
+
 
 
 function ProductPage(props) {
+  
   const theme = useTheme();
+  const loc = useLocation();
 
+  const { image } = loc.state;
 
   return (
     <div>
@@ -47,13 +52,13 @@ function ProductPage(props) {
           <CssBaseline />
 
           {/* Product Images */}
-          <Grid
-            item
+
+          <Grid item
             xs={false}
             sm={4}
             md={6.7}
             sx={{
-              backgroundImage: "url(/img/image.png)",
+              backgroundImage: "url("+{image}+")",
               height: "600px",
               backgroundRepeat: "no-repeat",
               backgroundColor: (t) =>
@@ -63,9 +68,12 @@ function ProductPage(props) {
               backgroundSize: "cover",
               backgroundPosition: "center",
               marginRight: "35px",
-              borderRadius: "24px"
-            }}
-          />
+              borderRadius: "24px",
+            }}>
+              <Container style={{display:"block", width: "79%", objecFit: "contain"}}>
+                <img src={image} style={{width: "109%"}}/>
+              </Container>
+            </Grid>
 
           {/* Product Details */}
           <Grid item md={5} elevation={6}>

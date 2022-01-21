@@ -60,7 +60,8 @@ export default function ProductItem({
       salePrice: salePrice,
       rating: rating,
       productDescription: productDescription,
-      serviceDescription: serviceDescription
+      serviceDescription: serviceDescription,
+      image: image
     }}
     >
       <Card sx={{ maxWidth: 356 }}>
@@ -81,7 +82,7 @@ export default function ProductItem({
           title=""
           subheader=""
         />
-        <CardMedia component="img" height="194" image="/img/image.png" alt="" />
+        <CardMedia component="img" height="194" image={image} alt="" />
         <CardContent>
           <Typography
             variant="h2"

@@ -2,6 +2,7 @@
     {
         "name": "Motorcycle Change oil",
         "price": 300,
+        "image" : "/img/item-img/18.jpg",
         "endingPrice": 500,
         "salePrice": 0.10,
         "rating": {
@@ -22,6 +23,7 @@
     {
         "name": "C2 Motorcycle Alloy Holder",
         "price": 199,
+        "image" : "/img/item-img/15.png",
         "endingPrice": 299,
         "salePrice": "",
         "rating": {
@@ -45,6 +47,7 @@
     {
         "name": "Shimano Tourney speed Rear",
         "price": 400,
+         "image" : "/img/item-img/3.png",
         "endingPrice": 500,
         "salePrice": "0.30",
         "rating": {
@@ -68,6 +71,7 @@
     {
         "name": "220CM*3.5CM XRM/WAVE125",
         "price": 400,
+        "image" : "/img/item-img/10.png",
         "endingPrice": 600,
         "salePrice": "",
         "rating": {
