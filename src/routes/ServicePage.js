@@ -70,7 +70,6 @@ function Service(props) {
         </Typography>
         <CarouselContainer />
       </Container>
-
       <Footer />
     </div>
   );
