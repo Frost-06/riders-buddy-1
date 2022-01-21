@@ -26,9 +26,7 @@ function Dashboard(props) {
         <div style={{ marginBottom: 56, marginTop: 56 }}>
           <Typography variant="h2">Explore by Category</Typography>
           <Typography variant="body2" style={{ marginBottom: 49 }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc arcu
-            justo, finibus ac nunc nec, dapibus vehicula massa. Vivamus nibh
-            tellus, molestie quis tellus id, rhoncus mattis magna
+          Discover items and services that will fit to your needs
           </Typography>
           <Categories />
         </div>
@@ -47,7 +45,7 @@ function Dashboard(props) {
         />
         <Typography variant="h2">Best Deals</Typography>
         <Typography variant="body2" style={{ marginBottom: 56 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Greatest offers awaits you.
         </Typography>
         <CarouselContainer />
         <TextField
@@ -66,7 +64,7 @@ function Dashboard(props) {
 
         <Typography variant="h2">What’s new?</Typography>
         <Typography variant="body2" style={{ marginBottom: 56 }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Experience the latest and be part of the trend!
         </Typography>
         <SecondCarouselContainer />
 

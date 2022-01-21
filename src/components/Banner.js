@@ -22,7 +22,6 @@ function Banner(props) {
               padding: "0px 0px 8px 150px",
               fontWeight: 700,
               marginBottom: 24,
-              
             }}
           >
             Browse for nearby stores

@@ -198,7 +198,7 @@ function Footer(props) {
             ©2022  Riders Buddy
             </Typography>
             <Box style={{display: "inline-flex", flexDirection: "row", gap: "32px"}}>
-            <Link>Terms and Conditions</Link>
+            <Link href="https://sites.google.com/view/riders-buddy/home">Terms and Conditions</Link>
             <Link>Privacy Policy</Link>
             </Box>
         </Box>
