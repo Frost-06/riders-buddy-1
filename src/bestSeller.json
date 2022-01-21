@@ -1,5 +1,27 @@
 [
-
+    {
+        "name": "KMC Chain Road Bike/Mountain Bike 9/10/11 Speed Magic Button 116L/118L Compatible for SHIMANO 9/10/11",
+        "price": 1500,
+        "endingPrice": 2500,
+        "salePrice": "0.25",
+        "rating": {
+            "stars": 4,
+            "count": "2.5k"
+        },
+        "productDescription": {
+            "soldItems": "500",
+            "parts": "Bike Chain",
+            "categories": "Bicycle Products",
+            "SKU": "96635",
+            "weight": "4kg",
+            "brand": "KMC",
+            "color": "Silver",
+            "stockStatus": "In Stock",
+            "numberOfStocks": "25",
+            "Dimensions": "10 x 20 x15"
+        },
+        "categoryType": "product"
+    },
     {
         "name": "Assemble & tune new boxed bike or new-to-you pre-owned bike",
         "price": 500,
@@ -9,7 +31,6 @@
             "stars": 5,
             "count": "1.5k"
         },
-
         "serviceDescription": {
             "soldItems": "100",
             "status": "Available",
@@ -19,31 +40,52 @@
             "laborType": "per service",
             "time": "08:00 A.M. - 05:00 P.M."
         },
-        "categoryType": "service"     
+        "categoryType": "service"
     },
     {
-        "name": "KMC Chain Road Bike/Mountain Bike 9/10/11 Speed Magic Button 116L/118L Compatible for SHIMANO 9/10/11",
-        "price": 1500,
-        "endingPrice": 2500,
-        "salePrice": 0.25,
+        "name": "Shimano Tourney 6/7/8 speed Rear Derailleur RD-TZ500 Bicycle Mountain Bike Part roller Groupset",
+        "price": 400,
+        "endingPrice": 500,
+        "salePrice": "0.30",
         "rating": {
             "stars": 4,
-            "count": "2.5k"
+            "count": "1.3k"
         },
         "productDescription": {
-            "soldItems": "500",
-            "parts": "SAVA Deck 300",
+            "soldItems": "107",
+            "parts": "Rear Shifter",
             "categories": "Bicycle Products",
-            "SKU": "96635",
-            "weight": "4kg",
-            "brand": "SAVA",
-            "color": "Blue",
+            "SKU": "96636",
+            "weight": "270g",
+            "brand": "Shimano",
+            "color": "Black",
             "stockStatus": "In Stock",
-            "numberOfStocks": "25",
-            "Dimensions": "10 x 20 x 15"
+            "numberOfStocks": "3",
+            "Dimensions": "14 x 12 x 55"
         },
-        "categoryType": "product"     
+        "categoryType": "product"
+    },
+    {
+        "name": "SNAIL 96BCD 32-38T MTB Bike Bicycle Chainring Chain Wheel Circular Disc Single speed positive and negative plate Bike Parts",
+        "price": 500,
+        "endingPrice": 600,
+        "salePrice": "0.50",
+        "rating": {
+            "stars": 4,
+            "count": "1.7k"
+        },
+        "productDescription": {
+            "soldItems": "98",
+            "parts": "Chain Wheel Circular Disc",
+            "categories": "Bicycle Products",
+            "SKU": "96637",
+            "weight": "52g",
+            "brand": "Snail",
+            "color": "Black",
+            "stockStatus": "In Stock",
+            "numberOfStocks": "26",
+            "Dimensions": "10 x 15 x 12"
+        },
+        "categoryType": "product"
     }
-
-
 ]
