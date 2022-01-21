@@ -13,14 +13,14 @@ import {
   import Categories from "../components/Categories";
   import ChatContainer from "../components/Chat/ChatContainer";
   import Footer from "../components/Footer";
-  import Header from "../components/Header";
+  import SecondHeader from "../components/SecondHeader";
   import ProductItem from "../components/ProductItem";
   
   function UserPage(props) {
     return (
       <div>
         <ChatContainer />
-        <Header />
+        <SecondHeader />
         <Banner />
         <Container style={{ maxWidth: 1600 }}>
           <div style={{ marginBottom: 56, marginTop: 56 }}>

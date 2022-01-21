@@ -75,11 +75,11 @@ function Copyright(props) {
               <TextField
                     style={{ width: 560, marginBottom: 56 }}
                     className="searchbox noshadow"
-                    placeholder="Enter your email address..."
+                    placeholder="Enter your number..."
                     variant="outlined"
-                    name="password"
+                    name="number"
                     type="text"
-                    id="email"
+                    id="number"
             />
                 <TextField
                     style={{ width: 560, marginBottom: 16 }}

@@ -5,31 +5,33 @@ import {
   CssBaseline,
   Link,
   Breadcrumbs,
+  Divider
 } from "@mui/material";
 
 import React from "react";
-import Header from "../components/Header";
+import SecondHeader from "../components/SecondHeader";
 import CarouselContainer from "../components/Carousel/CarouselContainer";
 import ServiceDetails from "../components/Service/ServiceDetails";
 import Footer from "../components/Footer"
+import ServiceTabPage from "../components/Service/serviceTabPage"
 
 function Service(props) {
 
   return (
     <div>
-      <Header />
+      <SecondHeader />
       <Container
         style={{ maxWidth: 1600, marginTop: "48px" }}
         className="productDesc"
       >
         <Breadcrumbs aria-label="breadcrumb" style={{ marginBottom: "24px" }}>
-          <Link underline="hover" color="inherit" href="/" variant="h3" st>
+          <Link underline="hover" color="inherit" href="/homepage" variant="h3" st>
             Home
           </Link>
 
           <Typography color="text.primary">Service Page</Typography>
         </Breadcrumbs>
-        <Grid container component="main" sx={{ height: "100vh" }}>
+        <Grid container component="main" sx={{ height: "140vh", marginBottom: "56px" }}>
           <CssBaseline />
           <Grid
             item
@@ -55,7 +57,9 @@ function Service(props) {
             <ServiceDetails />
           </Grid>
         </Grid>
-        <Typography variant="h2" style={{ marginBottom: "32px" }}>
+        <ServiceTabPage/>
+        <Divider />
+        <Typography variant="h2" style={{ marginTop: "128px", marginBottom: "32px" }}>
           Similar Services
         </Typography>
         <CarouselContainer />

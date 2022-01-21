@@ -11,15 +11,17 @@ import {
   Avatar,
   Link,
   Breadcrumbs,
+  Divider
 } from "@mui/material";
 
 import React from "react";
-import Header from "../components/Header";
+import SecondHeader from "../components/SecondHeader";
 import CarouselContainer from "../components/Carousel/CarouselContainer";
 import { useTheme } from "@emotion/react";
 import ProductDetails from "../components/Product/ProductDetails";
 import ChatContainer from "../components/Chat/ChatContainer";
 import Footer from "../components/Footer"
+import TabPage from "../components/Product/TabPage"
 
 
 function ProductPage(props) {
@@ -29,19 +31,19 @@ function ProductPage(props) {
   return (
     <div>
       <ChatContainer />
-      <Header />
+      <SecondHeader />
       <Container
         style={{ maxWidth: 1600, marginTop: "48px" }}
         className="productDesc"
       >
         <Breadcrumbs aria-label="breadcrumb" style={{ marginBottom: "24px" }}>
-          <Link underline="hover" color="inherit" href="/" variant="h3" st>
+          <Link underline="hover" color="inherit" href="/homepage" variant="h3" st>
             Home
           </Link>
 
           <Typography color="text.primary">Product Page</Typography>
         </Breadcrumbs>
-        <Grid container component="main" sx={{ height: "100vh" }}>
+        <Grid container component="main" sx={{ height: "140vh", marginBottom: "56px" }}>
           <CssBaseline />
 
           {/* Product Images */}
@@ -52,6 +54,7 @@ function ProductPage(props) {
             md={6.7}
             sx={{
               backgroundImage: "url(/img/image.png)",
+              height: "600px",
               backgroundRepeat: "no-repeat",
               backgroundColor: (t) =>
                 t.palette.mode === "light"
@@ -60,7 +63,6 @@ function ProductPage(props) {
               backgroundSize: "cover",
               backgroundPosition: "center",
               marginRight: "35px",
-              height: "50%",
               borderRadius: "24px"
             }}
           />
@@ -69,9 +71,11 @@ function ProductPage(props) {
           <Grid item md={5} elevation={6}>
             <ProductDetails />
           </Grid>
+         
         </Grid>
-
-        <Typography variant="h2" style={{ marginBottom: "32px" }}>
+         <TabPage/>
+        <Divider />
+        <Typography variant="h2" style={{ marginTop: "128px", marginBottom: "32px" }}>
           Similar Product
         </Typography>
         <CarouselContainer />

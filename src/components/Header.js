@@ -54,65 +54,8 @@ export default function Header() {
           Sign in
         </Button>
         <Box>
-          {/* Navigation */}
-
           
-          <nav>
-            <List>
-              <ListItem disablePadding>
-                <ListItemButton
-                  style={{ marginBottom: "24px", padding: "22px" }}
-                >
-                  <ListItemIcon>
-                    <img src={"/img/my-order.png"} alt="prof" />
-                  </ListItemIcon>
-                  <Typography style={{ fontWeight: "bold" }}>
-                    My Orders
-                  </Typography>
-                </ListItemButton>
-              </ListItem>
-
-              <ListItem disablePadding>
-                <ListItemButton
-                  style={{ marginBottom: "24px", padding: "22px" }}
-                >
-                  <ListItemIcon>
-                    <img src={"/img/my-favourites.png"} alt="prof" />
-                  </ListItemIcon>
-                  <Typography style={{ fontWeight: "bold" }}>
-                    My Favourites
-                  </Typography>
-                </ListItemButton>
-              </ListItem>
-
-              <ListItem disablePadding>
-                <ListItemButton
-                  style={{ marginBottom: "24px", padding: "22px" }}
-                >
-                  <ListItemIcon>
-                    <img src={"/img/vouchers.png"} alt="prof" />
-                  </ListItemIcon>
-                  <Typography style={{ fontWeight: "bold" }}>
-                    Vouchers
-                  </Typography>
-                </ListItemButton>
-              </ListItem>
-
-              <ListItem disablePadding>
-                <ListItemButton
-                  style={{ marginBottom: "24px", padding: "22px" }}
-                >
-                  <ListItemIcon>
-                    <img src={"/img/log-out.png"} alt="prof" />
-                  </ListItemIcon>
-                  <Typography style={{ fontWeight: "bold" }}>
-                    Log-out
-                  </Typography>
-                </ListItemButton>
-              </ListItem>
-            </List>
-          </nav>
-          <Divider />
+          <Divider style={{marginTop: '32px'}}/>
         </Box>
         <List>
           {["About us", "Seller Center", "Help Center"].map((text, index) => (
