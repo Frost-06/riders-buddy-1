@@ -25,19 +25,21 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function ProductItem({
-  name,
-  price,
-  salePrice,
-  endingPrice,
-  image,
-  rating,
-  productDescription,
-  serviceDescription,
-  categoryLabelIcon = "/img/product-category-label-icon.png",
-  categoryType,
-  categoryLabelIcon1,
-}) {
+export default function ProductItem(props) {
+  // const static, let 
+  let {
+    name,
+    price,
+    salePrice,
+    endingPrice,
+    image,
+    rating,
+    productDescription,
+    serviceDescription,
+    categoryLabelIcon = "/img/product-category-label-icon.png",
+    categoryType,
+    categoryLabelIcon1,
+  }=props;
   const [expanded, setExpanded] = React.useState(false);
   const theme = useTheme();
 
@@ -53,16 +55,9 @@ export default function ProductItem({
   return (
     <Link 
     to={"/"+categoryType}
-    state={{
-      name: name,
-      price: price,
-      endingPrice: endingPrice,
-      salePrice: salePrice,
-      rating: rating,
-      productDescription: productDescription,
-      serviceDescription: serviceDescription,
-      image: image
-    }}
+    state={
+      props
+    }
     >
       <Card sx={{ maxWidth: 356 }}>
         <CardHeader

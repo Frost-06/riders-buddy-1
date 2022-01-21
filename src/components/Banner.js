@@ -11,7 +11,8 @@ import React from "react";
 function Banner(props) {
 
   var arr = ["banner-3", "banner", "banner-2"]; 
-  var banner = arr[Math.floor(Math.random() * arr.length)]        
+  var banner = arr[Math.floor(Math.random() * arr.length)]      
+  console.log(banner);  
   return (
     <>
       <Container className={banner}>

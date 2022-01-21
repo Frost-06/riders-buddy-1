@@ -9,10 +9,11 @@ import SecondCarouselItem from "./SecondCarouselItem";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-function SecondCarouselContainer() {
+function SecondCarouselContainer(
+    {maxSteps=1}
+) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = 4;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);

@@ -9,10 +9,11 @@ import CarouselItems from "./CarouselItems";
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-function CarouselContainer() {
+function CarouselContainer(
+  {maxSteps=1}
+) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = 4;
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -34,7 +35,7 @@ function CarouselContainer() {
         onChangeIndex={handleStepChange}
         enableMouseEvents
       >
-        {new Array(4).fill(0).map((step, index) => (
+        {new Array(10).fill(0).map((step, index) => (
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? <CarouselItems /> : null}
           </div>
